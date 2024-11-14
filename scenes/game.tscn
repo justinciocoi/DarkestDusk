@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://daho03xmdxou5"]
+
+[ext_resource type="PackedScene" uid="uid://bsllrbq312tx8" path="res://scenes/player.tscn" id="1_12who"]
+[ext_resource type="PackedScene" uid="uid://bjrhpe6xem83h" path="res://scenes/platform.tscn" id="2_u3mpe"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w21ho"]
+distance = 98.0
+
+[node name="Game" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_w21ho")
+
+[node name="worldCamera" type="Camera2D" parent="."]
+position = Vector2(5, -260)
+zoom = Vector2(2, 2)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_12who")]
+position = Vector2(-18, -116)
+
+[node name="CollisionShape2D" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(177, -164)
+
+[node name="CollisionShape2D2" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(66, -225)
+
+[node name="CollisionShape2D3" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(-106, -140)
+
+[node name="CollisionShape2D4" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(-179, -185)
+
+[node name="CollisionShape2D5" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(-122, -246)
+
+[node name="CollisionShape2D9" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(-134, -310)
+
+[node name="CollisionShape2D6" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(160, -331)
+
+[node name="CollisionShape2D7" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(-185, -362)
+
+[node name="CollisionShape2D8" parent="." instance=ExtResource("2_u3mpe")]
+position = Vector2(-1, -337)
